@@ -137,17 +137,33 @@ if (RSTUDIO_BOOST_VERSION)
    set(BOOST_VERSION "${RSTUDIO_BOOST_VERSION}")
 endif()
 
-list(APPEND BOOST_LIBS
-   date_time
-   filesystem
-   iostreams
-   program_options
-   regex
-   signals
-   system
-   thread
-   chrono
-)
+
+# For OSX, thread-mt needs to be linked instead of thread 
+if(APPLE) 
+   list(APPEND BOOST_LIBS
+      date_time
+      filesystem
+      iostreams
+      program_options
+      regex
+      signals
+      system
+      thread-mt
+      chrono
+   )
+else()
+   list(APPEND BOOST_LIBS
+      date_time
+      filesystem
+      iostreams
+      program_options
+      regex
+      signals
+      system
+      thread
+      chrono
+   )
+endif()
 
 # UNIX BOOST
 if(UNIX)
