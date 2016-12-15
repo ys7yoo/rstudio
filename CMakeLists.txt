@@ -12,12 +12,6 @@
 # AGPL (http://www.gnu.org/licenses/agpl-3.0.txt) for more details.
 #
 #
-## Quick Fix for OSX Sierra
-include_directories(
-        /opt/local/include
-)
-
-add_definitions(-DBOOST_NO_CXX11_SCOPED_ENUMS)
 
 # set compiler
 include(CMakeCompiler.txt)
