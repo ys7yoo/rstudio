@@ -15,6 +15,7 @@
 
 ## Quick Fix for OSX Sierra
 include_directories(
+	/opt/rstudio-tools/boost/boost_1_50_0/include
         /opt/local/include
 )
 
