@@ -83,6 +83,7 @@ if(UNIX)
             set(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -stdlib=libstdc++")
          endif()
       endif()
+      message(STATUS "CMAKE_CXX_LINK_FLAGS: ${CMAKE_CXX_LINK_FLAGS}")
    endif()
 
    # gcc hardending options (see: http://wiki.debian.org/Hardening)
