@@ -66,6 +66,7 @@ then
      if [ "$SYS_MAJOR_VER" -gt "12" ]
      then
         CXX_STDLIB_FLAGS=cxxflags="-stdlib=libstdc++"
+        echo "$CXX_STDLIB"
      else
         CXX_STDLIB_FLAGS=""
      fi
