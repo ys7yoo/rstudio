@@ -13,9 +13,12 @@
 #
 #
 
-## Quick Fix for OSX Sierra
-include_directories(
+## Quick Fix for OSX Sierra with Mac Port
+include_directories(BEFORE
 	/opt/rstudio-tools/boost/boost_1_50_0/include
+)
+# for mac port libraries
+include_directories(AFTER
         /opt/local/include
 )
 link_directories(/opt/rstudio-tools/boost/boost_1_50_0/lib)
